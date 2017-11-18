@@ -1,0 +1,81 @@
+body {
+	background-color: #777;
+	width: 960px;
+	margin-left: 140px;
+	text-align: center;
+	font-family: 'Arial', 'Helvetica Neue', Hevetica, sans-serif;
+	font-size: 18px;
+}
+
+.content-lvl-1 {
+	background-color: #ebebeb;
+	color: #777;
+	margin: 10px 0;
+}
+
+header {
+	padding: 20px;
+	/*moving header element closer to top by overwriting content-lvl-1 margin*/
+	margin-top: 0px;
+}
+
+nav {
+	padding: 20px;
+}
+
+footer {
+	padding: 20px;
+	clear: both;
+}
+
+section {
+	padding: 20px;
+	float: left;
+	width: 495px;
+	display: inline;
+}
+
+/* adding padding bottom so text is not just sitting directly above article block; I don't know why this isn't working*/
+.span {
+	padding-bottom: 20px;
+	height: 38px;
+}
+
+.span::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+aside {
+	padding: 20px;
+	float: right;
+/* to get right margin to line up, just calculating width of aside; 960-(495-[20*2])-10 left margin=415 */
+	width: 365px;  /*why is it only 365px*/
+	height: 177px;  /*found using guess & check; surely there must be a better way*/
+	display: inline;
+}
+
+article {
+	background-color: #777;
+	color: #ebebeb;
+	padding: 10px;
+}
+
+.clear::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+h3 {
+	padding: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+p {
+	padding: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
